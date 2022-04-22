@@ -10,7 +10,8 @@ const connect = function () {
   conn.on('connect', () => {
     // code that does something when the connection is first established
     // console.log('Server says: ', "you ded cuz you idled")
-    console.log('You have connected');
+    console.log('Successfully connected to game server');
+    console.log('ZEF')
   });
 
   conn.on('data', (data) => {
