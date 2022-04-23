@@ -1,5 +1,14 @@
 const connect = require('./client');
 
+// constants
+const {
+  MOVE_UP,
+  MOVE_DOWN,
+  MOVE_LEFT,
+  MOVE_RIGHT,
+  messages,
+} = require("./constants");
+
 let connection;
 
 const setupInput = function (conn) {
@@ -18,15 +27,15 @@ const handleUserInput = function (data) {
   if (data === '\u0003') {
     process.exit();
   } else if (data === "w" || data === '\u001B\u005B\u0041') {
-    connection.write("Move: up");
+    connection.write(MOVE_UP);
   } else if (data === "s" || data === '\u001B\u005B\u0042') {
-    connection.write("Move: down");
+    connection.write(MOVE_DOWN);
   } else if (data === "a" || data === '\u001B\u005B\u0044') {
-    connection.write("Move: left");
+    connection.write(MOVE_LEFT);
   } else if (data === "d" || data === '\u001B\u005B\u0043') {
-    connection.write("Move: right");
-  } else if (data === "p" ) {
-    connection.write("Say: Hurray!");
+    connection.write(MOVE_RIGHT);
+  } else if (messages[data]) {
+    connection.write(`Say: ${messages[data]}`);
   }
   
 };
