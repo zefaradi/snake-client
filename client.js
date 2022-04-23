@@ -28,7 +28,6 @@ const connect = function () {
     // }, 1000)
   });
 
-
   conn.on('data', (data) => {
     console.log('Server says: ', data);
   });
@@ -39,4 +38,4 @@ const connect = function () {
   return conn;
 };
 
-module.exports = connect;
+module.exports = {connect};
