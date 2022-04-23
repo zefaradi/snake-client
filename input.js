@@ -1,4 +1,3 @@
-const connect = require('./client');
 
 // constants
 const {
@@ -9,8 +8,11 @@ const {
   messages,
 } = require("./constants");
 
+
+// Stores connection object.
 let connection;
 
+//// Function to handle user input from stdin
 const setupInput = function (conn) {
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -23,7 +25,6 @@ const setupInput = function (conn) {
 
 const handleUserInput = function (data) {
   // your code here
-  // console.log("data: ", data);
   if (data === '\u0003') {
     process.exit();
   } else if (data === "w" || data === '\u001B\u005B\u0041') {
