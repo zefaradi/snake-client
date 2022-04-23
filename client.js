@@ -11,8 +11,23 @@ const connect = function () {
     // code that does something when the connection is first established
     // console.log('Server says: ', "you ded cuz you idled")
     console.log('Successfully connected to game server');
-    console.log('ZEF')
+    conn.write("Name: ZEF");
+    // setTimeout(() => {
+    //   conn.write("Move: up");
+    // },1000)
+
+    // setTimeout(() => {
+    //   conn.write("Move: left");
+    // },2000)
+
+    // setTimeout(() => {
+    //   conn.write("Move: down");
+    // },3000)
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 1000)
   });
+
 
   conn.on('data', (data) => {
     console.log('Server says: ', data);
