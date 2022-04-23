@@ -1,4 +1,3 @@
-
 // constants
 const {
   MOVE_UP,
@@ -13,7 +12,7 @@ const {
 let connection;
 
 //// Function to handle user input from stdin
-const setupInput = function (conn) {
+const setupInput = function(conn) {
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -23,7 +22,7 @@ const setupInput = function (conn) {
   return stdin;
 };
 
-const handleUserInput = function (data) {
+const handleUserInput = function(data) {
   // your code here
   if (data === '\u0003') {
     process.exit();
