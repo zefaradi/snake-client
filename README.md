@@ -9,7 +9,7 @@ https://github.com/lighthouse-labs/snek-multiplayer
 
 ## Final Product
 
-![https://github.com/zefaradi/snake-client/blob/master/Snake%20Video%20Game%20Screenshot.JPG](#)
+![https://github.com/zefaradi/snake-client/blob/master/Snake_Video_Game_Screenshot.JPG](#)
 
 ## Getting Started
 
